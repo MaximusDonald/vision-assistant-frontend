@@ -1,0 +1,2 @@
+﻿/api/*  https://vision-backend.up.railway.app/api/:splat  200
+/*      /index.html                                       200

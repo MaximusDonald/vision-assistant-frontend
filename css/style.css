@@ -1,0 +1,116 @@
+/* Style personnalisé */
+
+/* Mode contraste élevé */
+body.high-contrast {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.high-contrast .bg-white {
+    background-color: #1a1a1a !important;
+    color: #fff !important;
+}
+
+body.high-contrast .text-gray-800,
+body.high-contrast .text-gray-700,
+body.high-contrast .text-gray-600 {
+    color: #fff !important;
+}
+
+/* Animation pulse pour status */
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Status WebSocket colors */
+.ws-connected {
+    background-color: #10b981;
+}
+
+.ws-disconnected {
+    background-color: #ef4444;
+}
+
+.ws-connecting {
+    background-color: #f59e0b;
+}
+
+/* Scrollbar logs */
+#logs-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#logs-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+#logs-container::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 4px;
+}
+
+#logs-container::-webkit-scrollbar-thumb:hover {
+    background: #6a6a6a;
+}
+
+/* Recording animation */
+@keyframes recording-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+}
+
+.recording {
+    animation: recording-pulse 1.5s infinite;
+}
+
+/* Transitions douces */
+button {
+    transition: all 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Focus accessibilité */
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Large text mode (accessibilité) */
+body.large-text {
+    font-size: 120%;
+}
+
+body.large-text h1 {
+    font-size: 2.5rem;
+}
+
+body.large-text h2 {
+    font-size: 1.75rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
